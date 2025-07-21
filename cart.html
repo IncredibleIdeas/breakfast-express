@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Breakfast Express</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-poppins bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                        <span class="ml-2 text-xl font-bold text-gray-800">Breakfast Express</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Home</a>
+                        <a href="menu.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Menu</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">About</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="cart.html" class="p-1 rounded-full text-orange-600 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-orange-600 hover:bg-orange-50 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Header -->
+    <div class="relative bg-gradient-to-r from-orange-500 to-yellow-500 py-16 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-transparent mix-blend-overlay"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    Your Cart
+                </h1>
+                <p class="mt-6 max-w-lg mx-auto text-xl text-orange-100">
+                    Review your order before checkout
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Cart Items -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 border-b border-gray-200">
+                        <h2 class="text-lg font-medium text-gray-900">Your Order</h2>
+                    </div>
+                    <div id="cart-items" class="divide-y divide-gray-200">
+                        <!-- Cart items will be dynamically inserted here -->
+                        <div class="p-6 text-center text-gray-500">
+                            <i class="fas fa-shopping-cart text-4xl mb-4 text-gray-300"></i>
+                            <p>Your cart is empty</p>
+                            <a href="menu.html" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600">
+                                Browse Menu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden sticky top-6">
+                    <div class="p-6 border-b border-gray-200">
+                        <h2 class="text-lg font-medium text-gray-900">Order Summary</h2>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span id="subtotal" class="font-medium">$0.00</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Delivery Fee</span>
+                            <span id="delivery-fee" class="font-medium">$2.99</span>
+                        </div>
+                        <div class="flex justify-between mb-4">
+                            <span class="text-gray-600">Tax (8%)</span>
+                            <span id="tax" class="font-medium">$0.00</span>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4 flex justify-between">
+                            <span class="text-lg font-bold">Total</span>
+                            <span id="total" class="text-lg font-bold">$2.99</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="checkout.html" id="checkout-btn" class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                                Proceed to Checkout
+                            </a>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-sm text-gray-500">or</p>
+                            <a href="menu.html" class="mt-2 text-sm font-medium text-orange-600 hover:text-orange-500">
+                                Continue Shopping
+                                <span aria-hidden="true"> &rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Code -->
+                <div class="mt-6 bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-md font-medium text-gray-900 mb-3">Have a promo code?</h3>
+                        <div class="flex">
+                            <input type="text" id="promo-code" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-l-md border border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" placeholder="Enter code">
+                            <button id="apply-promo" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-md shadow-sm text-white bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                                Apply
+                            </button>
+                        </div>
+                        <p id="promo-message" class="mt-2 text-sm text-gray-600 hidden"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-orange-400 tracking-wider uppercase">Breakfast Express</h3>
+                    <p class="mt-4 text-sm text-gray-400">
+                        Delivering delicious breakfast and fast food to start your day right.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html" class="text-sm text-gray-400 hover:text-orange-400">Home</a></li>
+                        <li><a href="menu.html" class="text-sm text-gray-400 hover:text-orange-400">Menu</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-orange-400">About Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-orange-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Contact</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li class="text-sm text-gray-400">123 Breakfast St</li>
+                        <li class="text-sm text-gray-400">Foodville, FC 12345</li>
+                        <li class="text-sm text-gray-400">(555) 123-4567</li>
+                        <li class="text-sm text-gray-400">hello@breakfastexpress.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Follow Us</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2023 Breakfast Express. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

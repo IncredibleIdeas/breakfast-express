@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Express - Start Your Day Right</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-poppins bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                        <span class="ml-2 text-xl font-bold text-gray-800">Breakfast Express</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-orange-600 bg-orange-100">Home</a>
+                        <a href="menu.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Menu</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">About</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="cart.html" class="p-1 rounded-full text-gray-600 hover:text-orange-600 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-orange-600 hover:bg-orange-50 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:mt-16 lg:px-8 xl:mt-20">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block">Start your day</span>
+                            <span class="block text-orange-600">with deliciousness</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Order your favorite breakfast and fast food items delivered fresh to your doorstep in minutes.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="menu.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 md:py-4 md:text-lg md:px-10">
+                                    Order Now
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-orange-700 bg-orange-100 hover:bg-orange-200 md:py-4 md:text-lg md:px-10">
+                                    How it works
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <div class="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full relative">
+                <div class="absolute inset-0 transform translate-x-8 translate-y-12 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-tl-extra rounded-br-extra opacity-90 lg:translate-x-20 lg:translate-y-20"></div>
+                <div class="absolute inset-0 transform -translate-x-8 -translate-y-8 bg-gradient-to-br from-purple-300 to-pink-400 rounded-tr-extra rounded-bl-extra opacity-90 lg:-translate-x-20 lg:-translate-y-20"></div>
+                <div class="absolute inset-0 transform rotate-6 bg-gradient-to-br from-blue-300 to-teal-400 rounded-extra opacity-90"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <img class="w-3/4 h-3/4 object-contain z-10" src="https://cdn.pixabay.com/photo/2017/12/10/14/47/breakfast-3010620_1280.png" alt="Breakfast items">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="py-12 bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Categories</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    What are you craving?
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+                    <a href="menu.html#breakfast" class="category-card bg-gradient-to-br from-yellow-100 to-orange-50 rounded-xl p-6 text-center transform hover:scale-105 transition duration-300 shadow-sm hover:shadow-md">
+                        <div class="mx-auto h-16 w-16 flex items-center justify-center bg-white rounded-full shadow-inner">
+                            <i class="fas fa-egg text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Breakfast</h3>
+                        <p class="mt-1 text-sm text-gray-600">Fresh morning meals</p>
+                    </a>
+                    <a href="menu.html#sandwiches" class="category-card bg-gradient-to-br from-blue-100 to-teal-50 rounded-xl p-6 text-center transform hover:scale-105 transition duration-300 shadow-sm hover:shadow-md">
+                        <div class="mx-auto h-16 w-16 flex items-center justify-center bg-white rounded-full shadow-inner">
+                            <i class="fas fa-bread-slice text-2xl text-blue-500"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Sandwiches</h3>
+                        <p class="mt-1 text-sm text-gray-600">Tasty fillings</p>
+                    </a>
+                    <a href="menu.html#beverages" class="category-card bg-gradient-to-br from-purple-100 to-pink-50 rounded-xl p-6 text-center transform hover:scale-105 transition duration-300 shadow-sm hover:shadow-md">
+                        <div class="mx-auto h-16 w-16 flex items-center justify-center bg-white rounded-full shadow-inner">
+                            <i class="fas fa-coffee text-2xl text-purple-500"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Beverages</h3>
+                        <p class="mt-1 text-sm text-gray-600">Hot & cold drinks</p>
+                    </a>
+                    <a href="menu.html#snacks" class="category-card bg-gradient-to-br from-green-100 to-emerald-50 rounded-xl p-6 text-center transform hover:scale-105 transition duration-300 shadow-sm hover:shadow-md">
+                        <div class="mx-auto h-16 w-16 flex items-center justify-center bg-white rounded-full shadow-inner">
+                            <i class="fas fa-cookie text-2xl text-green-500"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Snacks</h3>
+                        <p class="mt-1 text-sm text-gray-600">Quick bites</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Items -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Popular</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Customer favorites
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-yellow-200 to-orange-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2016/11/06/23/31/breakfast-1804457_1280.png" alt="Pancakes">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Fluffy Pancakes</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">$6.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Stack of 3 with maple syrup and butter</p>
+                        <button class="mt-4 w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-200 to-teal-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.png" alt="Burger">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Classic Burger</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">$8.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Beef patty with cheese, lettuce, and special sauce</p>
+                        <button class="mt-4 w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-200 to-pink-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2015/07/12/14/26/coffee-842020_1280.png" alt="Coffee">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Premium Coffee</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">$3.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Freshly brewed from premium beans</p>
+                        <button class="mt-4 w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="menu.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600">
+                    View Full Menu
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features -->
+    <section class="py-12 bg-gradient-to-br from-purple-50 to-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Why Choose Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Fast, Fresh & Delicious
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="feature-card bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Lightning Fast</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Average delivery time of just 20 minutes from order to your door.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-green-500 to-teal-500 text-white">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Fresh Ingredients</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            We source only the freshest, highest quality ingredients for every meal.
+                        </p>
+                    </div>
+
+                    <div class="feature-card bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Made with Love</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Every dish is prepared with care by our expert chefs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-orange-400 tracking-wider uppercase">Breakfast Express</h3>
+                    <p class="mt-4 text-sm text-gray-400">
+                        Delivering delicious breakfast and fast food to start your day right.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html" class="text-sm text-gray-400 hover:text-orange-400">Home</a></li>
+                        <li><a href="menu.html" class="text-sm text-gray-400 hover:text-orange-400">Menu</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-orange-400">About Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-orange-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Contact</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li class="text-sm text-gray-400">123 Breakfast St</li>
+                        <li class="text-sm text-gray-400">Foodville, FC 12345</li>
+                        <li class="text-sm text-gray-400">(555) 123-4567</li>
+                        <li class="text-sm text-gray-400">hello@breakfastexpress.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Follow Us</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                    <h3 class="mt-6 text-sm font-semibold text-gray-300 tracking-wider uppercase">Download App</h3>
+                    <div class="mt-4 flex space-x-2">
+                        <a href="#" class="flex items-center justify-center w-32 h-10 bg-black rounded-md">
+                            <i class="fab fa-apple mr-2"></i>
+                            <span class="text-xs">App Store</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-32 h-10 bg-black rounded-md">
+                            <i class="fab fa-google-play mr-2"></i>
+                            <span class="text-xs">Play Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2023 Breakfast Express. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

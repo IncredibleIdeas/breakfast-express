@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Breakfast Express</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-poppins bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                        <span class="ml-2 text-xl font-bold text-gray-800">Breakfast Express</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Home</a>
+                        <a href="menu.html" class="px-3 py-2 rounded-md text-sm font-medium text-orange-600 bg-orange-100">Menu</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">About</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-orange-600 hover:bg-orange-50">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="cart.html" class="p-1 rounded-full text-gray-600 hover:text-orange-600 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-orange-600 hover:bg-orange-50 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <div class="relative bg-gradient-to-r from-orange-500 to-yellow-500 py-16 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-transparent mix-blend-overlay"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    Our Menu
+                </h1>
+                <p class="mt-6 max-w-lg mx-auto text-xl text-orange-100">
+                    Delicious breakfast and fast food options to satisfy every craving
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Filter -->
+    <div class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex overflow-x-auto py-4 space-x-4 hide-scrollbar">
+                <button class="filter-btn flex-shrink-0 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-medium" data-category="all">
+                    All Items
+                </button>
+                <button class="filter-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-700 font-medium hover:bg-gray-100" data-category="breakfast">
+                    Breakfast
+                </button>
+                <button class="filter-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-700 font-medium hover:bg-gray-100" data-category="sandwiches">
+                    Sandwiches
+                </button>
+                <button class="filter-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-700 font-medium hover:bg-gray-100" data-category="beverages">
+                    Beverages
+                </button>
+                <button class="filter-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-700 font-medium hover:bg-gray-100" data-category="snacks">
+                    Snacks
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Sections -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Breakfast Section -->
+        <section id="breakfast" class="mb-16">
+            <div class="flex items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Breakfast</h2>
+                <div class="ml-4 h-px flex-1 bg-gradient-to-r from-orange-400 to-yellow-400 opacity-50"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Breakfast Item 1 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="breakfast">
+                    <div class="relative h-48 bg-gradient-to-br from-yellow-200 to-orange-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2016/11/06/23/31/breakfast-1804457_1280.png" alt="Pancakes">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Fluffy Pancakes</h3>
+                            <span class="text-orange-600 font-bold">$6.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Stack of 3 with maple syrup and butter</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.8 (120)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="1" data-name="Fluffy Pancakes" data-price="6.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast Item 2 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="breakfast">
+                    <div class="relative h-48 bg-gradient-to-br from-yellow-200 to-orange-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2017/01/16/17/45/pancake-1984716_1280.png" alt="French Toast">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">French Toast</h3>
+                            <span class="text-orange-600 font-bold">$7.49</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Thick slices with cinnamon and powdered sugar</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.6 (95)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="2" data-name="French Toast" data-price="7.49">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast Item 3 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="breakfast">
+                    <div class="relative h-48 bg-gradient-to-br from-yellow-200 to-orange-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2018/04/13/17/14/vegetable-skewer-3317060_1280.png" alt="Breakfast Skillet">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Veggie Skillet</h3>
+                            <span class="text-orange-600 font-bold">$8.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Potatoes, bell peppers, onions, mushrooms, and eggs</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.7 (82)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="3" data-name="Veggie Skillet" data-price="8.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sandwiches Section -->
+        <section id="sandwiches" class="mb-16">
+            <div class="flex items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Sandwiches</h2>
+                <div class="ml-4 h-px flex-1 bg-gradient-to-r from-blue-400 to-teal-400 opacity-50"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Sandwich Item 1 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="sandwiches">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-200 to-teal-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.png" alt="Classic Burger">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Classic Burger</h3>
+                            <span class="text-orange-600 font-bold">$8.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Beef patty with cheese, lettuce, and special sauce</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.9 (210)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="4" data-name="Classic Burger" data-price="8.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sandwich Item 2 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="sandwiches">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-200 to-teal-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2014/09/18/21/25/sandwich-451403_1280.png" alt="Chicken Sandwich">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Grilled Chicken</h3>
+                            <span class="text-orange-600 font-bold">$7.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Juicy chicken with avocado and chipotle mayo</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.7 (156)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="5" data-name="Grilled Chicken Sandwich" data-price="7.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sandwich Item 3 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="sandwiches">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-200 to-teal-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.png" alt="Bacon Cheeseburger">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Bacon Cheeseburger</h3>
+                            <span class="text-orange-600 font-bold">$9.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Double patty with crispy bacon and cheddar</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.8 (187)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="6" data-name="Bacon Cheeseburger" data-price="9.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beverages Section -->
+        <section id="beverages" class="mb-16">
+            <div class="flex items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Beverages</h2>
+                <div class="ml-4 h-px flex-1 bg-gradient-to-r from-purple-400 to-pink-400 opacity-50"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Beverage Item 1 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="beverages">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-200 to-pink-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2015/07/12/14/26/coffee-842020_1280.png" alt="Premium Coffee">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Premium Coffee</h3>
+                            <span class="text-orange-600 font-bold">$3.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Freshly brewed from premium beans</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.9 (320)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="7" data-name="Premium Coffee" data-price="3.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverage Item 2 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="beverages">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-200 to-pink-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2013/07/13/01/22/tea-155150_1280.png" alt="Iced Tea">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Iced Tea</h3>
+                            <span class="text-orange-600 font-bold">$2.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Freshly brewed with lemon</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.5 (145)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="8" data-name="Iced Tea" data-price="2.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverage Item 3 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="beverages">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-200 to-pink-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552_1280.png" alt="Smoothie">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Berry Smoothie</h3>
+                            <span class="text-orange-600 font-bold">$4.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Mixed berries with yogurt</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.8 (92)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="9" data-name="Berry Smoothie" data-price="4.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Snacks Section -->
+        <section id="snacks" class="mb-16">
+            <div class="flex items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Snacks</h2>
+                <div class="ml-4 h-px flex-1 bg-gradient-to-r from-green-400 to-emerald-400 opacity-50"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Snack Item 1 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="snacks">
+                    <div class="relative h-48 bg-gradient-to-br from-green-200 to-emerald-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2016/03/05/22/18/food-1239241_1280.png" alt="French Fries">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">French Fries</h3>
+                            <span class="text-orange-600 font-bold">$3.49</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Crispy golden fries with sea salt</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.7 (210)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="10" data-name="French Fries" data-price="3.49">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snack Item 2 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="snacks">
+                    <div class="relative h-48 bg-gradient-to-br from-green-200 to-emerald-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2014/04/03/00/41/onion-309622_1280.png" alt="Onion Rings">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Onion Rings</h3>
+                            <span class="text-orange-600 font-bold">$4.29</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Crispy battered onion rings</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.5 (134)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="11" data-name="Onion Rings" data-price="4.29">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snack Item 3 -->
+                <div class="menu-item bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300" data-category="snacks">
+                    <div class="relative h-48 bg-gradient-to-br from-green-200 to-emerald-300">
+                        <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-40 w-auto" src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238245_1280.png" alt="Mozzarella Sticks">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-gray-900">Mozzarella Sticks</h3>
+                            <span class="text-orange-600 font-bold">$5.99</span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Breaded with marinara sauce</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-sm text-gray-600">4.9 (178)</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white py-2 px-4 rounded-md transition duration-300" data-id="12" data-name="Mozzarella Sticks" data-price="5.99">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fixed Order Button for Mobile -->
+    <div class="fixed bottom-6 right-6 md:hidden">
+        <a href="cart.html" class="flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 shadow-lg text-white">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span id="mobile-cart-count" class="absolute -top-1 -right-1 bg-white text-orange-600 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center border border-orange-200">0</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-orange-400 tracking-wider uppercase">Breakfast Express</h3>
+                    <p class="mt-4 text-sm text-gray-400">
+                        Delivering delicious breakfast and fast food to start your day right.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html" class="text-sm text-gray-400 hover:text-orange-400">Home</a></li>
+                        <li><a href="menu.html" class="text-sm text-gray-400 hover:text-orange-400">Menu</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-orange-400">About Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-orange-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Contact</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li class="text-sm text-gray-400">123 Breakfast St</li>
+                        <li class="text-sm text-gray-400">Foodville, FC 12345</li>
+                        <li class="text-sm text-gray-400">(555) 123-4567</li>
+                        <li class="text-sm text-gray-400">hello@breakfastexpress.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Follow Us</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2023 Breakfast Express. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-orange-400">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
